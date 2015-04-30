@@ -4,6 +4,13 @@ md-list .md-button {
     text-align: left;
     width: 100%;
 }
+
 md-icon.md-default-theme.white {
     color: #ffffff;
+}
+
+.form-at form > .row {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
 }

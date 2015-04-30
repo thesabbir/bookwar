@@ -3,11 +3,17 @@ angular.module('app.routes', ['ui.router'])
         $stateProvider
             .state('login', {
                 url: "/login",
-                templateUrl: "tpls/login.html"
+                templateUrl: "tpls/login.html",
+                controller: function ($rootScope) {
+                    $rootScope.pageTitle = "Login";
+                }
             })
             .state('signup', {
                 url: "/signup",
-                templateUrl: "tpls/signup.html"
+                templateUrl: "tpls/signup.html",
+                controller: function ($rootScope) {
+                    $rootScope.pageTitle = "Sign Up";
+                }
             });
-        $urlRouterProvider.otherwise("/signup");
+        $urlRouterProvider.otherwise("/login");
     });

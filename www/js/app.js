@@ -7,6 +7,7 @@ app.config(function ($mdThemingProvider) {
 });
 
 app.controller('AppCtrl', ['$scope', '$mdSidenav', function($scope, $mdSidenav){
+    $scope.pageTitile = "bookWAR"
     $scope.toggleSidenav = function(menuId) {
         $mdSidenav(menuId).toggle();
     };

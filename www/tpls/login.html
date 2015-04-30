@@ -1,17 +1,19 @@
-<div class="textFieldDemo1">
+<div class="form-at">
     <div layout="column">
         <md-content>
             <form style="padding: 20px;">
-                <md-text-float label="Company" ng-model="user.company" disabled></md-text-float>
                 <div class="row">
-                    <md-input-container><label>COC User name</label><input ng-model="user.username"/></md-input-container>
-                    <md-input-container><label>Email</label><input ng-model="user.email"/></md-input-container>
+                    <md-input-container><label>COC User name</label><input ng-model="user.username"/>
+                    </md-input-container>
                 </div>
                 <div class="row">
-                    <md-input-container><label>Password</label><input ng-model="user.password"/></md-input-container>
-                    <md-input-container><label>Confirm Password</label><input ng-model="user.confirmPassword"/></md-input-container>
+                    <md-input-container><label>Password</label><input ng-model="user.password" type="password"/></md-input-container>
                 </div>
-                </md-input-container>
+                <div class="row">
+                    <md-input-container>
+                        <md-button class="md-raised md-primary">Primary</md-button>
+                    </md-input-container>
+                </div>
             </form>
         </md-content>
     </div>
