@@ -1,0 +1,9 @@
+md-list .md-button {
+    color: inherit;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+}
+md-icon.md-default-theme.white {
+    color: #ffffff;
+}

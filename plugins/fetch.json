@@ -1,0 +1,9 @@
+{
+    "cordova-plugin-statusbar": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/apache/cordova-plugin-statusbar.git",
+            "subdir": "."
+        }
+    }
+}
