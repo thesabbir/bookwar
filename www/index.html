@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport"
-          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
     <link rel="stylesheet" type="text/css" href="vendors/angular-material.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="app/app.css"/>
 
     <title>Hello World</title>
 </head>
@@ -17,7 +17,7 @@
         <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-sm aria-label="Settings">
             <md-icon md-svg-icon="icons/menu.svg" class="white"></md-icon>
         </md-button>
-        <h2 class="md-toolbar-tools" layout-align-gt-sm="center"> {{pageTitle}}</h2>
+        <h2 class="md-toolbar-tools" layout-align-gt-sm="center" ng-bind="pageTitle"></h2>
     </div>
 </md-toolbar>
 <div layout="row" flex>
@@ -29,13 +29,16 @@
 
         <md-list>
             <md-list-item>
-                <p>Members</p>
+                <a ui-sref="profile">My Profile</a>
             </md-list-item>
             <md-list-item>
-                <p>Wars</p>
+                <a ui-sref="clan">My Clan</a>
             </md-list-item>
             <md-list-item>
-                <a ui-shref="login">Login</a>
+                <a ui-sref="wars">Wars</a>
+            </md-list-item>
+            <md-list-item>
+                <a ui-sref="logout">Logout</a>
             </md-list-item>
         </md-list>
 
@@ -46,13 +49,29 @@
         </md-content>
     </div>
 </div>
+<!--Cordova.js-->
 <script src="cordova.js"></script>
-<script src="vendors/angular.min.js"></script>
+<!--end cordova.js-->
+<!--Angular & Dependencies-->
+<script src="vendors/angular.js"></script>
+<!--<script src="vendors/angular.min.js"></script>-->
 <script src="vendors/angular-ui-router.min.js"></script>
 <script src="vendors/angular-animate.min.js"></script>
 <script src="vendors/angular-aria.min.js"></script>
 <script src="vendors/angular-material.min.js"></script>
-<script src="js/app.routes.js"></script>
-<script src="js/app.js"></script>
+<script src="vendors/angular-jwt.min.js"></script>
+<script src="vendors/angular-storage.min.js"></script>
+<script src="vendors/angular-resource.min.js"></script>
+<!--end Dependencies-->
+<!--app-->
+<script src="app/auth.js"></script>
+<script src="app/cawar.js"></script>
+<script src="app/login/login.js"></script>
+<script src="app/clan/clan.js"></script>
+<script src="app/signup/signup.js"></script>
+<script src="app/wars/wars.js"></script>
+<script src="app/profile/profile.js"></script>
+<script src="app/app.js"></script>
+<!--end app-->
 </body>
 </html>

@@ -14,3 +14,7 @@ md-icon.md-default-theme.white {
     align-items: center;
     flex-direction: row;
 }
+.md-sidenav-left a {
+    text-decoration: inherit;
+    color: inherit;
+}
